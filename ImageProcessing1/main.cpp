@@ -27,7 +27,7 @@ void calculateAndPrintParametres(Mat& img1, Mat& img2); // calculation of charac
 
 
 int main(int argc, char* argv[]) {
-	string imageName("avto.jpg");
+	string imageName("mono.jpg");
 	Mat InputImage = imread(imageName.c_str(), IMREAD_COLOR);
 	Mat SaltAndPaperNoiseImage = InputImage.clone();
 	Mat GaussianNoiseImage = InputImage.clone();
