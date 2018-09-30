@@ -10,7 +10,7 @@ using namespace cv;
 int clamp(int value, int left, int right);
 void generateNoise(Mat& img);
 void deleteNoise(Mat& img, int radius);
-void generateGaussianNoise(Mat& img, int deviation = 1, int mu = 0);
+void generateGaussianNoise(Mat& img, int deviation = 6, int mu = 0);
 
 int main(int argc, char* argv[]) {
 	string imageName("avto.jpg");
@@ -93,25 +93,44 @@ void deleteNoise(Mat& img, int radius) {
 	}
 }
 
-void generateGaussianNoise(Mat& img, int deviation, int mu) {
+/*void generateGaussianNoise(Mat& img, int deviation, int mu) {
 	double maximum = 1 / (sqrt(2 * CV_PI) * deviation);
 
 	for (int i = 0; i < img.rows; i++) {
 		for (int j = 0; j < img.cols; j++) {
 			Vec3b pixel = img.at<Vec3b>(i, j);
-			double mu = 0.299 * pixel[2] + 0.587 * pixel[1] + 0.114 * pixel[0];
+			double grayLevel = 0.299 * pixel[2] + 0.587 * pixel[1] + 0.114 * pixel[0];
+			long double result = exp(-pow((long double)(grayLevel - mu), 2) / (long double)(2 * deviation * deviation)) / (sqrt(2 * CV_PI) * deviation);
 
 			for (int k = 0; k < 3; k++) {
-				double result = exp(-pow((mu - pixel[k]), 2) / (2 * deviation * deviation)) / (sqrt(2 * CV_PI) * deviation);
-				img.at<Vec3b>(i, j)[k] = clamp((int)(result * pixel[k] / maximum), 0, 255);
+				img.at<Vec3b>(i, j)[k] = clamp((int)result + pixel[k], 0, 255);
+			}
+		}
+	}
+}*/
+
+void generateGaussianNoise(Mat& img, int deviation, int mu) {
+	srand(0);
+	for (int i = 0; i < img.rows; i++) {
+		for (int j = 0; j < img.cols; j++) {
+			Vec3b pixel = img.at<Vec3b>(i, j);
+			double prob = (double)rand() / RAND_MAX;
+			int addGrayLevel = (int)( deviation * ( -2 * log( prob * sqrt(2 * CV_PI) * deviation) ) );
+
+			for (int k = 0; k < 3; k++) {
+				img.at<Vec3b>(i, j)[k] = clamp(pixel[k] + addGrayLevel, 0, 255);
 			}
 		}
 	}
 }
 
+
+
 int clamp(int value, int left, int right) {
-	if (value > right) value = right;
-	if (value < left) value = left;
+	int result = value;
 	
-	return value;
+	if (result > right) result = right;
+	if (result < left) result = left;
+	
+	return result;
 }
