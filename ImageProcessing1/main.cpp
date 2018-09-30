@@ -73,6 +73,10 @@ int main(int argc, char* argv[]) {
 	/* calculation of characteristics of an image and print it on the console */
 	/*																		*/																		
 
+	// check for the correctness of the parameter search functions
+	cout << endl << "***** Check for correctness *****" << endl << endl << endl;
+	calculateAndPrintParametres(InputImage, InputImage);
+
 
 	/*					salt and paper										*/
 	
