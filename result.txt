@@ -1,0 +1,202 @@
+***************************************************************************************************************
+***************************************************************************************************************
+***************************************************************************************************************
+****           Summary record          ************************************************************************
+***************************************************************************************************************
+***************************************************************************************************************
+***************************************************************************************************************
+
+
+***** Check for correctness *****
+ **SSIM: 0.999996 **
+
+
+ 
+*** original and SAP noise ***
+ **SSIM: 0.83008 **
+
+*** SAP noise and filtered SAP ***
+ **SSIM: 0.63417 **
+
+ 
+ *** original and filtered SAP noise ***
+ **SSIM: 0.627169 **
+
+
+
+
+
+
+
+
+***************************************************************************************************************
+***************************************************************************************************************
+***************************************************************************************************************
+****           Full report          ***************************************************************************
+***************************************************************************************************************
+***************************************************************************************************************
+***************************************************************************************************************
+
+
+***** Check for correctness *****
+
+
+***First image***
+ **Average: 65.8539 **
+ **Variance: 53.997 **
+
+***Second image***
+ **Average: 65.8539 **
+ **Variance: 53.997 **
+
+***Comparative parameters for two images***
+ **Covariance: 2915.67 **
+ **Luminance: 1 **
+ **Contrast: 1 **
+ **Structure: 0.999996 **
+
+
+***Result***
+ **SSIM: 0.999996 **
+
+
+
+
+
+*** original and SAP noise ***
+***First image***
+ **Average: 65.8539 **
+ **Variance: 53.997 **
+
+***Second image***
+ **Average: 68.89 **
+ **Variance: 61.2268 **
+
+***Comparative parameters for two images***
+ **Covariance: 2768.8 **
+ **Luminance: 0.998985 **
+ **Contrast: 0.992157 **
+ **Structure: 0.837492 **
+
+
+***Result***
+ **SSIM: 0.83008 **
+
+
+
+
+
+*** SAP noise and filtered SAP ***
+***First image***
+ **Average: 68.89 **
+ **Variance: 61.2268 **
+
+***Second image***
+ **Average: 88.6057 **
+ **Variance: 43.433 **
+
+***Comparative parameters for two images***
+ **Covariance: 1843.72 **
+ **Luminance: 0.969142 **
+ **Contrast: 0.943814 **
+ **Structure: 0.693317 **
+
+
+***Result***
+ **SSIM: 0.63417 **
+
+
+
+
+
+*** original and filtered SAP noise ***
+***First image***
+ **Average: 65.8539 **
+ **Variance: 53.997 **
+
+***Second image***
+ **Average: 88.6057 **
+ **Variance: 43.433 **
+
+***Comparative parameters for two images***
+ **Covariance: 1572.66 **
+ **Luminance: 0.957527 **
+ **Contrast: 0.976761 **
+ **Structure: 0.670571 **
+
+
+***Result***
+ **SSIM: 0.627169 **
+
+
+
+
+
+*** original and gaussian noise ***
+***First image***
+ **Average: 65.8539 **
+ **Variance: 53.997 **
+
+***Second image***
+ **Average: 48.7105 **
+ **Variance: 52.7377 **
+
+***Comparative parameters for two images***
+ **Covariance: 2780.93 **
+ **Luminance: 0.956197 **
+ **Contrast: 0.999722 **
+ **Structure: 0.976562 **
+
+
+***Result***
+ **SSIM: 0.933525 **
+
+
+
+
+
+*** gaussian noise and filtered gaussian ***
+***First image***
+ **Average: 48.7105 **
+ **Variance: 52.7377 **
+
+***Second image***
+ **Average: 53.5212 **
+ **Variance: 47.6387 **
+
+***Comparative parameters for two images***
+ **Covariance: 2349.42 **
+ **Luminance: 0.995581 **
+ **Contrast: 0.994852 **
+ **Structure: 0.935146 **
+
+
+***Result***
+ **SSIM: 0.926221 **
+
+
+
+
+
+*** original and filtered gaussian ***
+***First image***
+ **Average: 65.8539 **
+ **Variance: 53.997 **
+
+***Second image***
+ **Average: 53.5212 **
+ **Variance: 47.6387 **
+
+***Comparative parameters for two images***
+ **Covariance: 2427.3 **
+ **Luminance: 0.978879 **
+ **Contrast: 0.992203 **
+ **Structure: 0.943614 **
+
+
+***Result***
+ **SSIM: 0.916482 **
+
+
+
+
